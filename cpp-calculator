@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+double sum(double a, double b)
+{
+    return a + b;
+}
+
+double sub(double a, double b)
+{
+    return a - b;
+}
+
+double mul(double a, double b)
+{
+    return a * b;
+}
+
+double divv(double a, double b)
+{
+    if (b != 0)
+        return a / b;
+    else
+        return 0;
+}
+
+int main()
+{
+    while (true)
+    {
+        double a, b;
+        char opt;
+
+        cin >> a >> opt >> b;
+
+        if (opt == '+')
+        {
+            cout << sum(a, b);
+        }
+        else if (opt == '-')
+        {
+            cout << sub(a, b);
+        }
+        else if (opt == '*')
+        {
+            cout << mul(a, b);
+        }
+        else if (opt == '/')
+        {
+            cout << divv(a, b);
+        }
+        else
+        {
+            cout << "Invalid Operator\n";
+        }
+
+        cout << endl;
+        cout << "Do You want to Continue? (y/n)";
+
+        char answer;
+        cin >> answer;
+
+        if (answer == 'n')
+        {
+            cout << "Thanks";
+            break;
+        }
+    }
+}
